@@ -1,0 +1,30 @@
+* {
+
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+body {
+
+    background-color: rgb(34, 34, 34);
+
+}
+
+menu {
+
+    width: 100vw;
+    background-color: rgb(20, 20, 20);
+
+}
+
+main {
+
+    width: 500px;
+    margin: auto;
+
+    background-color: rgb(53, 53, 53);
+
+
+}
