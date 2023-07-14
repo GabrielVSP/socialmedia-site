@@ -8,6 +8,11 @@
 
 body {
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     background-color: rgb(34, 34, 34);
     color: white;
 
@@ -19,12 +24,15 @@ header {
     margin-bottom: 30px;
 
     background-color: rgb(20, 20, 20);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.349);
 
 }
 
 menu {
 
     padding: 10px;
+    color: rgb(255, 230, 0);
+    text-shadow: 2px 0px rgb(255, 145, 0);
 
 }
 
@@ -68,6 +76,8 @@ section#bottombar > div > span
     border-radius: 50%;
     margin-top: 20px;
 
+    color: rgb(250, 246, 0);
+
 }
 
 section#bottombar > div > span:hover
@@ -76,9 +86,86 @@ section#bottombar > div > span:hover
     display: table-cell;
     vertical-align: middle;
 
-   width: 60px;
-   height: 60px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
 
-   border: 1px solid white;
+    border: 1px solid rgb(255, 230, 0);
+
+    transition-duration: 0.25s;
+
+}
+
+.filterContainer {
+
+    width: 50vw;
+
+}
+
+.filter {
+
+    width: 100%;
+    font-size: 1.2em;
+
+}
+
+.loader {
+
+    opacity: 0;
+
+    display: flex;
+    position: fixed;
+    bottom: 90px;
+    
+    transition: opacity 0.25s ease-in;
+
+}
+
+.loader.show {
+
+    margin-top: 20px;
+    opacity: 1;
+
+}
+
+.circle {
+
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+
+    background-color: white;
+    border-radius: 50%;
+
+    animation: bounce 0.5s ease-in infinite;
+
+}
+
+.circle:nth-of-type(2) {
+
+    animation-delay: 0.1s;
+
+}
+
+.circle:nth-of-type(3) {
+
+    animation-delay: 0.2s;
+
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+
+        transform: translate(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+    }
 
 }
