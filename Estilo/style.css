@@ -38,12 +38,45 @@ menu {
 
 main {
 
-    width: 65vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 70vw;
     margin: auto;
 
     background-color: rgb(53, 53, 53);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.404);
 
+
+}
+
+#memeGenerator {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0px;
+    width: 300px;
+
+}
+
+#memeGenerator img {
+
+    width: 300px;
+    height: 400px;
+
+}
+
+div#img {
+
+    width: 350px;
+    height: 400px;
+
+    background-color: aliceblue;
 
 }
 
@@ -99,6 +132,7 @@ section#bottombar > div > span:hover
 .filterContainer {
 
     width: 50vw;
+    margin-bottom: 30px;
 
 }
 

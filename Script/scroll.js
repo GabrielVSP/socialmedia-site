@@ -1,4 +1,4 @@
-const postContainer = document.getElementById("postsContainer")
+/*const postContainer = document.getElementById("postsContainer")
 const filter = document.getElementById("filter")
 const load = document.querySelector(".loader")
 
@@ -107,4 +107,4 @@ window.addEventListener("scroll", () => {
 })
 
 showPosts()
-filter.addEventListener("input", filterPosts)
+filter.addEventListener("input", filterPosts)*/
