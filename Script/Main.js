@@ -1,14 +1,15 @@
-//const memeImg = document.querySelector(".memeGenerator img")
 const section = document.querySelector("#memeGenerator")
+const filter = document.getElementById("filter")
 
 const load = document.querySelector(".loader")
+
+filter.addEventListener("input", filterMeme)
 
 const updateDetails = (url, title, author) =>
 {
 
-    /*memeImg.style.background = `url(${url}) no-repeat`
-    memeImg.style.backgroundSize = "cover"
-    memeImg.style.backgroundPosition = "center center"*/
+    const memeDiv = document.createElement("div")
+    memeDiv.classList.add("memeDiv")
 
     const memeImg = document.createElement("img")
     const memeTitle = document.createElement("h2")
@@ -17,11 +18,16 @@ const updateDetails = (url, title, author) =>
     memeImg.setAttribute("src", url)
 
     memeTitle.innerHTML = title
-    memeAuthor.innerHTML = `Feito por: ${author}`
+    memeTitle.classList.add("memeTitle")
 
-    section.appendChild(memeTitle)
-    section.appendChild(memeImg)
-    section.appendChild(memeAuthor)
+    memeAuthor.innerHTML = `Feito por: ${author}`
+    memeAuthor.classList.add("memeAuthor")
+
+    memeDiv.appendChild(memeTitle)
+    memeDiv.appendChild(memeImg)
+    memeDiv.appendChild(memeAuthor)
+
+    section.appendChild(memeDiv)
 
 }
 
@@ -55,6 +61,34 @@ const generateMeme = () =>
     }
 
     
+
+}
+
+function filterMeme(i)
+{
+
+    const term = i.target.value.toUpperCase()
+    const memes = document.querySelectorAll(".memeDiv")
+
+    memes.forEach(meme => {
+        
+        const title = meme.querySelector(".memeTitle").innerText.toUpperCase()
+        const author = meme.querySelector(".memeAuthor").innerText.toUpperCase()
+
+        if(title.indexOf(term) > -1 || author.indexOf(term) > -1)
+        {
+
+            meme.style.display = "block"
+
+        }
+        else
+        {
+
+            meme.style.display = "none"
+
+        }
+
+    });
 
 }
 

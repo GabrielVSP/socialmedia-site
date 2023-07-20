@@ -32,7 +32,7 @@ menu {
 
     padding: 10px;
     color: rgb(255, 230, 0);
-    text-shadow: 2px 0px rgb(255, 145, 0);
+    text-shadow: 1px 0px rgb(255, 187, 0);
 
 }
 
@@ -69,14 +69,15 @@ main {
     width: 300px;
     height: 400px;
 
+    margin: 12px 0px;
+
 }
 
-div#img {
+#memeGenerator h2 {
 
-    width: 350px;
-    height: 400px;
-
-    background-color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.521);
+    text-align: center;
+    margin-top: 8px;
 
 }
 
@@ -85,8 +86,8 @@ section#bottombar {
     width: 100vw;
     height: 70px;
 
-    position:absolute;
-    bottom:0;
+    position: fixed;
+    bottom: 0;
     left: 0%;
    
     background-color: rgb(15, 15, 15);
@@ -133,6 +134,8 @@ section#bottombar > div > span:hover
 
     width: 50vw;
     margin-bottom: 30px;
+
+    display: none;
 
 }
 
@@ -186,6 +189,8 @@ section#bottombar > div > span:hover
     animation-delay: 0.2s;
 
 }
+
+
 
 @keyframes bounce {
 
